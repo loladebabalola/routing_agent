@@ -1,0 +1,33 @@
+# Routing rules configuration
+# Define how tasks should be routed to different model capabilities
+
+# Format:
+# category:
+#   priority: [0-5] where 5 is highest priority
+#   fallback: category to fall back to if no models available
+#   description: human-readable description
+
+general:
+  priority: 1
+  fallback: true
+  description: "General purpose tasks"
+
+coding:
+  priority: 2
+  fallback: general
+  description: "Programming and coding tasks"
+
+reasoning:
+  priority: 3
+  fallback: general
+  description: "Logical reasoning and analysis tasks"
+
+advanced:
+  priority: 4
+  fallback: reasoning
+  description: "Advanced and complex tasks"
+
+lightweight:
+  priority: 0
+  fallback: general
+  description: "Simple and quick tasks"
