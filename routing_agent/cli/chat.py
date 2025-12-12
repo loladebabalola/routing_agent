@@ -14,6 +14,7 @@ from rich.text import Text
 from rich import print as rprint
 import sys
 import os
+from typing import Optional, Tuple, Any
 
 # Add the project root to Python path
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
